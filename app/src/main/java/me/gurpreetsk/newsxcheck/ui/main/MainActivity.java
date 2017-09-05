@@ -8,7 +8,7 @@ import me.gurpreetsk.newsxcheck.R;
 import me.gurpreetsk.newsxcheck.ui.base.BaseActivity;
 
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements MainView{
 
   private static final String TAG = MainActivity.class.getSimpleName();
 
@@ -21,7 +21,6 @@ public class MainActivity extends BaseActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
   }
-
 
 
 }
