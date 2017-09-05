@@ -9,6 +9,6 @@ import me.gurpreetsk.newsxcheck.ui.base.BaseMvpView;
 
 public interface MainView extends BaseMvpView {
 
-//  void setData();
+  void showData();
 
 }

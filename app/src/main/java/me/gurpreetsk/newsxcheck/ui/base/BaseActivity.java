@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 
 import me.gurpreetsk.newsxcheck.InitApplication;
 import me.gurpreetsk.newsxcheck.dagger.component.ActivityComponent;
@@ -54,6 +55,16 @@ public class BaseActivity extends AppCompatActivity implements BaseMvpView {
     if (progressDialog != null && progressDialog.isShowing()) {
       progressDialog.cancel();
     }
+  }
+
+  @Override
+  public void showErrorMessage(String error) {
+    Toast.makeText(this, error, Toast.LENGTH_SHORT).show();
+  }
+
+  @Override
+  public void showNotifMessage(String notif) {
+    Toast.makeText(this, notif, Toast.LENGTH_SHORT).show();
   }
 
 }

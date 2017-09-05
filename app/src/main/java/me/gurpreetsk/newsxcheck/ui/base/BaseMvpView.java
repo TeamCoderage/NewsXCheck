@@ -10,4 +10,8 @@ public interface BaseMvpView {
 
   void hideLoading();
 
+  void showErrorMessage(String error);
+
+  void showNotifMessage(String notif);
+
 }

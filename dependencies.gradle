@@ -30,8 +30,11 @@ ext {
 
     rxAndroidVer = "2.0.1"
     rxJavaVer = "2.1.3"
-    rxCupboardVer="2.0"
+    rxCupboardVer = "2.0"
+    realmAdapterVer = "2.1.0"
 
+    stethoVer = "1.5.0"
+    uphycaVer = "2.1.0"
 
     javaPoetVer = "1.2.0"
     SimpleSqlProviderVer = "1.0.6"

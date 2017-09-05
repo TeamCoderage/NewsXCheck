@@ -3,6 +3,7 @@ package me.gurpreetsk.newsxcheck.data;
 import android.content.Context;
 import android.content.res.Resources;
 import android.support.annotation.NonNull;
+import android.widget.Toast;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -35,12 +36,19 @@ public class DbHelper {
     realm.executeTransaction(new Realm.Transaction() {
       @Override
       public void execute(@NonNull Realm realm) {
-        ClipboardData data = realm.createObject(ClipboardData.class);
+        Number currentIdNum = realm.where(ClipboardData.class).max("id");
+        long nextId;
+        if (currentIdNum == null)
+          nextId = 0;
+        else
+          nextId = currentIdNum.longValue() + 1;
+
+        ClipboardData data = realm.createObject(ClipboardData.class, nextId);
         data.setContent(clipboardData.getContent());
-        data.setId(clipboardData.getId());
         dataId[0] = data.getId();
       }
     });
+//    Toast.makeText(context, "Inserted: " + clipboardData.getContent() + " " + dataId[0], Toast.LENGTH_SHORT).show();
     return dataId[0];
   }
 

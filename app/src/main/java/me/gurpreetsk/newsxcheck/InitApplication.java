@@ -3,6 +3,7 @@ package me.gurpreetsk.newsxcheck;
 import android.app.Application;
 import android.content.Context;
 
+
 import javax.inject.Inject;
 
 import io.realm.Realm;
@@ -25,11 +26,16 @@ public class InitApplication extends Application {
   @Override
   public void onCreate() {
     super.onCreate();
+    Realm.init(this);
+//    Stetho.initialize(
+//        Stetho.newInitializerBuilder(this)
+//            .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
+//            .enableWebKitInspector(RealmInspectorModulesProvider.builder(this).build())
+//            .build());
     appComponent = DaggerAppComponent.builder()
         .appModule(new AppModule(this))
         .build();
     appComponent.inject(this);
-    Realm.init(this);
   }
 
   public static InitApplication getApplication(Context context) {
