@@ -1,47 +1,39 @@
 package me.gurpreetsk.newsxcheck.data.model;
 
+import io.realm.RealmObject;
 
-import ckm.simple.sql_provider.annotation.SimpleSQLColumn;
-import ckm.simple.sql_provider.annotation.SimpleSQLTable;
+public class ClipboardData extends RealmObject{
 
-@SimpleSQLTable(table = "ClipboardData",
-    provider = "me.gurpreetsk.newsxcheck")
-public class ClipboardData {
+    private long id;
+    private String content;
 
-  @SimpleSQLColumn(value = "id",
-      primary = true,
-      autoincrement = true)
-  private Long id;
-  @SimpleSQLColumn("content")
-  private String content;
+    public ClipboardData() {
+    }
 
-  public ClipboardData() {
-  }
+    public ClipboardData(String content) {
+        this.content = content;
+    }
 
-  public ClipboardData(String content) {
-    this.content = content;
-  }
+    public long getId() {
+        return id;
+    }
 
-  public Long getId() {
-    return id;
-  }
+    public void setId(long id) {
+        this.id = id;
+    }
 
-  public void setId(Long id) {
-    this.id = id;
-  }
+    public String getContent() {
+        return content;
+    }
 
-  public String getContent() {
-    return content;
-  }
+    public void setContent(String content) {
+        this.content = content;
+    }
 
-  public void setContent(String content) {
-    this.content = content;
-  }
-
-  @Override
-  public String toString() {
-    return "User{" +
-        "id=" + id +
-        ", name='" + content + "}\n";
-  }
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + content + "}\n";
+    }
 }

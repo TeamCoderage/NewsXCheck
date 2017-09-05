@@ -1,4 +1,4 @@
-package me.gurpreetsk.newsxcheck.ui.MainActivity;
+package me.gurpreetsk.newsxcheck.ui.main;
 
 import android.content.Context;
 import android.content.Intent;

@@ -3,7 +3,7 @@ package me.gurpreetsk.newsxcheck.dagger.component;
 import dagger.Component;
 import me.gurpreetsk.newsxcheck.dagger.PerActivity;
 import me.gurpreetsk.newsxcheck.dagger.module.ActivityModule;
-import me.gurpreetsk.newsxcheck.ui.MainActivity.MainActivity;
+import me.gurpreetsk.newsxcheck.ui.main.MainActivity;
 
 /**
  * Created by Gurpreet on 29/08/17.

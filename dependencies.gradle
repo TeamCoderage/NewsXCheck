@@ -1,12 +1,13 @@
 ext {
-    androidPluginVer = "2.3.3"
-    compileSdkVer = 25
-    buildToolsVer = "25.0.3"
+    androidPluginVer = "3.0.0-beta4"
+    realmPluginVer = "3.7.0"
+    compileSdkVer = 26
+    buildToolsVer = "26.0.1"
 
     minSdkVer = 15
-    targetSdkVer = 25
+    targetSdkVer = 26
 
-    supportLibVer = "25.3.1"
+    supportLibVer = "26.0.2"
 
     junitVer = "4.12"
     espressoVer = "2.2.2"
@@ -14,6 +15,8 @@ ext {
     butterknifeVer = "8.8.1"
     daggerVer = "2.9"
     jsr250apiVer = "1.0"
+
+    picassoVer = "2.5.2"
 
     okhttpVer = "3.7.0"
     okhttpLoggingInterceptorVer = "3.7.0"
@@ -27,6 +30,8 @@ ext {
 
     rxAndroidVer = "2.0.1"
     rxJavaVer = "2.1.3"
+    rxCupboardVer="2.0"
+
 
     javaPoetVer = "1.2.0"
     SimpleSqlProviderVer = "1.0.6"

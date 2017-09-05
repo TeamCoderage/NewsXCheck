@@ -1,4 +1,4 @@
-package me.gurpreetsk.newsxcheck.ui.MainActivity;
+package me.gurpreetsk.newsxcheck.ui.main;
 
 import me.gurpreetsk.newsxcheck.ui.base.BasePresenterImpl;
 

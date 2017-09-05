@@ -3,8 +3,6 @@ package me.gurpreetsk.newsxcheck.data;
 import android.content.Context;
 import android.content.res.Resources;
 
-import java.util.List;
-
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
@@ -12,10 +10,6 @@ import io.reactivex.Observable;
 import me.gurpreetsk.newsxcheck.dagger.ApplicationContext;
 import me.gurpreetsk.newsxcheck.data.model.ClipboardData;
 
-
-/**
- * Created by janisharali on 25/12/16.
- */
 
 @Singleton
 public class DataManager {
@@ -42,15 +36,13 @@ public class DataManager {
   }
 
   //TODO: setup M
-  public Long insertData(ClipboardData data) throws Exception {
-//    return mDbHelper.insertData(data, mContext);
-    return -1L;
+  public long insertData(ClipboardData data) throws Exception {
+    return mDbHelper.insertData(data);
   }
 
-  public Observable<List<ClipboardData>> getAllClipboardData()
+  public Observable<ClipboardData> getAllClipboardData()
       throws Resources.NotFoundException, NullPointerException {
-//    return mDbHelper.getClipboardContents(mContext);
-    return Observable.empty();
+    return mDbHelper.getClipboardContents();
   }
 
 }

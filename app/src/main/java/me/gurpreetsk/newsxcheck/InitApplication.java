@@ -5,6 +5,7 @@ import android.content.Context;
 
 import javax.inject.Inject;
 
+import io.realm.Realm;
 import me.gurpreetsk.newsxcheck.dagger.component.AppComponent;
 import me.gurpreetsk.newsxcheck.dagger.component.DaggerAppComponent;
 import me.gurpreetsk.newsxcheck.dagger.module.AppModule;
@@ -28,6 +29,7 @@ public class InitApplication extends Application {
         .appModule(new AppModule(this))
         .build();
     appComponent.inject(this);
+    Realm.init(this);
   }
 
   public static InitApplication getApplication(Context context) {

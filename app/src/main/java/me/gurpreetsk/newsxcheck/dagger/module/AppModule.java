@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 
 import dagger.Module;
 import dagger.Provides;
+import io.realm.Realm;
 import me.gurpreetsk.newsxcheck.dagger.ApplicationContext;
 import me.gurpreetsk.newsxcheck.dagger.DatabaseInfo;
 
@@ -36,7 +37,7 @@ public class AppModule {
   @Provides
   @DatabaseInfo
   String provideDatabaseName() {
-    return "kitecash-task.db";
+    return "clipboard.db";
   }
 
   @Provides
@@ -47,7 +48,12 @@ public class AppModule {
 
   @Provides
   SharedPreferences provideSharedPrefs() {
-    return application.getSharedPreferences("kitecash-task", Context.MODE_PRIVATE);
+    return application.getSharedPreferences("clipboard", Context.MODE_PRIVATE);
+  }
+
+  @Provides
+  Realm providesRealm(){
+    return Realm.getDefaultInstance();
   }
 
 }
